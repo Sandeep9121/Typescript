@@ -30,17 +30,19 @@ var randovalue = 19;
 randovalue = true;
 randovalue = 'sandeep';
 //if variable is any no error
-var myvariable1 = 10;
-console.log(myvariable1.name);
-myvariable1();
-myvariable1.toUpperCase();
+// let  myvariable1 :any=10;
+// console.log (myvariable1.name);
+// myvariable1();
+// myvariable1.toUpperCase();
 // if you assign it to unknown it require proper data type
-var myvariable = 10;
-function hasName(obj) {
-    return !!obj &&
-        typeof obj === "object" &&
-        "name" in obj;
-}
-console.log(myvariable.name);
-myvariable();
-myvariable.toUpperCase();
+// let  myvariable : unknown=10;
+// function hasName(obj :any):obj is {name :string}{
+//     return !!obj &&
+//            typeof obj === "object" &&
+//            "name" in obj
+// }
+// if(hasName(myvariable)){
+//     console.log (myvariable.name);
+// }
+//myvariable(); // error
+// (myvariable as string).toUpperCase();

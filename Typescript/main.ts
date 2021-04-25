@@ -33,17 +33,41 @@ console.log (myvariable1.name);
 myvariable1();
 myvariable1.toUpperCase();
 
-// if you assign it to unknown it require proper data type
+//if you assign it to unknown it require proper data type
 let  myvariable : unknown=10;
 function hasName(obj :any):obj is {name :string}{
     return !!obj &&
            typeof obj === "object" &&
            "name" in obj
 }
+if(hasName(myvariable)){
+    console.log (myvariable.name);
+}
 
-console.log (myvariable.name);
-myvariable();
+
+//myvariable(); // error
 (myvariable as string).toUpperCase();
+
+let a;
+a=10;
+a=true;
+let b=20;
+//b=true; ---> error
+
+//ability to specify union of types
+
+let multiType: number | boolean;
+multiType=20;
+multiType=true;
+
+console.log("hiiii======",multiType.valueOf);
+console.log('skskskss');
+
+//anytype
+let anyType :any;
+anyType=20;
+anyType=true;
+
 
 
 
